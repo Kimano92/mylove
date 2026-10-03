@@ -7,7 +7,7 @@ body{font-family:"Lora","Noto Serif","Georgia",serif;font-style:italic;color:#2a
 button{font:inherit;background:none;border:0;color:inherit;cursor:pointer}
 #go{font-size:clamp(18px,5vw,22px);padding:14px 28px;margin-top:10px;border:1.5px solid #2a2826;border-radius:3px 12px 4px 10px}
 #book{height:100%;display:flex;flex-direction:column;padding:env(safe-area-inset-top) 14px env(safe-area-inset-bottom)}
-#art{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;transition:opacity .45s}
+#art{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;transition:opacity .6s}
 #art svg{width:100%;height:100%;max-width:640px;animation:zoom 14s ease-out forwards}
 @keyframes zoom{from{transform:scale(1)}to{transform:scale(1.04)}}
 #txt{height:28%;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:clamp(21px,5.6vw,30px);line-height:1.4;padding:0 8px;transition:opacity .45s}
