@@ -51,5 +51,5 @@ night,nightFam,
 ret0:()=>ret(0),ret1:()=>ret(1),ret2:()=>ret(2),ret3:()=>ret(3),
 dim:()=>[thr([[20,268],[170,269],[260,268]]),...house(315,268,1.5),...ch('m',50,268,.8),...ch('mk',100,268,.46),...ch('mi',135,268,.44),...ch('k',185,268,.8)],
 familyH:()=>S.family(1)};
-function render(name,dur,fast){const sc=S[name](),L=sc.reduce((a,s)=>a+s.len,0),time=Math.max(1.3,Math.min(dur*.72,9))*(fast?.75:1),sp=Math.max(L/time,60);let t=.15;
+function render(name,dur,fast){const sc=S[name](),L=sc.reduce((a,s)=>a+s.len,0),time=Math.max(1.3,Math.min(dur*.72,9))*1.08*(fast?.75:1),sp=Math.max(L/time,60);let t=.15;
 return '<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">'+sc.map(s=>{const d=Math.max(.2,s.len/sp),r=`<path class="ln ${s.cls}" pathLength="1" style="--d:${t.toFixed(2)}s;--t:${d.toFixed(2)}s" d="${s.d}"/>`;t+=d;return r}).join('')+'</svg>'}
