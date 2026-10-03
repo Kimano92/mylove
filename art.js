@@ -41,6 +41,7 @@ mapfar:()=>[sg(EU),sg([[100,195],[150,170],[175,140],[215,150],[250,110],[262,88
 dist:()=>[...ch('m',28,270,.55),thr([[54,231],[68,256],[95,269],[128,270]]),...van(150,270,.75),thr([[192,270],[216,270]]),...house(250,270,.7),thr([[274,270],[300,270]]),...ch('k',318,270,.6),...ch('mk',350,270,.36),...ch('mi',375,270,.34)],
 think,
 katp:()=>[...ch('k',200,282,1.25)],
+mmp:()=>[...gr(278),...ch('mk',140,278,1),thr([[187,208],[204,196],[221,185]]),...ch('mi',260,278,1)],
 markp:()=>[...ch('mk',200,282,1.2)],
 michelp:()=>[...ch('mi',200,282,1.2)],
 home:()=>[...gr(275),...win(235,45,140,150),...ch('k',120,275,.95),...ch('mk',180,275,.5),...ch('mi',205,275,.47)],
@@ -51,5 +52,5 @@ night,nightFam,
 ret0:()=>ret(0),ret1:()=>ret(1),ret2:()=>ret(2),ret3:()=>ret(3),
 dim:()=>[thr([[20,268],[170,269],[260,268]]),...house(315,268,1.5),...ch('m',50,268,.8),...ch('mk',100,268,.46),...ch('mi',135,268,.44),...ch('k',185,268,.8)],
 familyH:()=>S.family(1)};
-function render(name,dur,fast){const sc=S[name](),L=sc.reduce((a,s)=>a+s.len,0),time=Math.max(1.6,Math.min(dur*.55,7))*(fast?.88:1),sp=Math.max(L/time,60);let t=.15;
+function render(name,dur,fast){const sc=S[name](),L=sc.reduce((a,s)=>a+s.len,0),time=Math.max(1.6,Math.min(dur*.5,6.5))*(fast?.95:1),sp=Math.max(L/time,60);let t=.15;
 return '<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">'+sc.map(s=>{const d=Math.max(.2,s.len/sp),r=`<path class="ln ${s.cls}" pathLength="1" style="--d:${t.toFixed(2)}s;--t:${d.toFixed(2)}s" d="${s.d}"/>`;t+=d;return r}).join('')+'</svg>'}
